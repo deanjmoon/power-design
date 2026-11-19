@@ -60,6 +60,8 @@
 **Rule:** Text is never full-viewport-wide. Page shell max-width 1200–1440 px, centered with auto margins and a gutter (`padding-inline: clamp(1rem, 5vw, 4rem)`). Prose columns capped at 65–75ch.
 **Codifiable:** `.container { max-width: 1280px; margin-inline: auto; padding-inline: clamp(16px, 5vw, 64px); }`. `.prose { max-width: 68ch; }`.
 
+**Section alignment.** Align the outer edges of peer sections, accordions and card groups to the shared content grid. Apply the prose measure to the text inside each section. Check both edges at mobile and desktop widths.
+
 ### Principle: Intrinsic Layout (let the browser do the math)
 **Source:** Jen Simmons, "Intrinsic Web Design" (2018); Heydon Pickering, *Every Layout*.
 **Rule:** Prefer intrinsic responsive primitives over breakpoint-toggled columns:
@@ -204,6 +206,8 @@ Components reference *only* semantic tokens. Dark mode remaps the semantic layer
 **Source:** Apple HIG; WCAG 2.5.8 (Target Size); `@media (hover)`.
 **Rule:** Never hide essential affordances behind hover alone — touch devices have no hover. Use `@media (hover: hover)` for hover enhancements only. Tap targets ≥44×44 px with ≥8 px spacing. Increase target size on coarse pointers.
 **Codifiable:** Any info revealed on `:hover` is also reachable on `:focus` and on tap (click/tap toggles it on touch).
+
+**Accordion controls.** Use `+` for collapsed rows and `−` for expanded rows. Keep the icon at the trailing edge as headings wrap. Prefer native `<details>` and `<summary>` or an accessible button with an announced expanded state. Mark the icon as decorative and keep keyboard focus visible. For nested accordions, show the state of the row that owns the icon.
 
 ### Principle: Empty, Loading & Error States
 **Source:** NN/g; Refactoring UI; Shopify Polaris.
