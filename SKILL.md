@@ -117,6 +117,7 @@ If they want a real project (multi-file, a framework, shadcn/Tailwind), scaffold
 
 ### Pre-emit checklist (web)
 - [ ] **#1** Mobile-first; capped measure — shell max-width 1200–1440px, prose ≤75ch, no edge-to-edge text.
+- [ ] Align the outer edges of peer sections and card groups to the shared content grid at mobile and desktop widths. Cap prose measure inside those sections.
 - [ ] **#2** Content-driven breakpoints (640/768/1024/1280); tested at 320/390/768/1024/1440, zero h-scroll.
 - [ ] **#3** Fluid type & space via `clamp()` (no jumps; `rem` term preserves zoom).
 - [ ] **#4** Body ≥16px; tap targets ≥44×44px, ≥8px apart.
@@ -129,6 +130,7 @@ If they want a real project (multi-file, a framework, shadcn/Tailwind), scaffold
 - [ ] **#11** WCAG 2.2 AA floor — text ≥4.5:1, UI/focus ≥3:1, never hue alone; aim AAA on body.
 - [ ] **#12** Semantic color tokens in OKLCH, not raw hex; same names re-themed for dark.
 - [ ] **#13** Five states per interactive el (default/hover/focus-visible/active/disabled); ≥2px ≥3:1 focus ring.
+- [ ] For accordions, show `+` collapsed and `−` expanded at the trailing edge. Verify focus, keyboard toggling and the independent visual state of nested rows.
 - [ ] **#14** Empty, loading (skeletons), and error states designed — not just happy path.
 - [ ] **#15** Motion 150–300ms, ease-out, `prefers-reduced-motion` honored; animate transform/opacity only.
 - [ ] **#16** Reserve space (width/height or aspect-ratio on media) — CLS <0.1.
